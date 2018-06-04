@@ -10,3 +10,11 @@
 
 <body <?php body_class(); ?>>
 <div id="wrapper">
+    <header>
+
+        <?php
+
+        $locations = get_nav_menu_locations(); var_dump( $locations );
+        $menu = get_term( $locations['header_menu'], 'nav_menu' ); var_dump( $menu );
+        var_dump( wp_get_nav_menu_items( 1 ) ); ?>
+    </header>
