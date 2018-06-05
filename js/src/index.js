@@ -1,4 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import MenuWrapper from './components/Menu';
 
-// ReactDOM.render(<App />, document.getElementById('root'));
+
+ReactDOM.render(<MenuWrapper />, document.getElementById('menu'));

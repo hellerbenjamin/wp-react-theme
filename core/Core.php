@@ -14,9 +14,10 @@ Class Core {
 	public function init() {
 		$this->load();
 
-
 		$menu = new namespace\Menu('header_menu', 'Header Menu' );
 		$menu->create();
+
+		$this->actions();
 	}
 
 	public function actions() {
@@ -34,7 +35,7 @@ Class Core {
 	}
 
 	public function enqueue_assets() {
-		wp_enqueue_script( 'js', get_stylesheet_directory_uri() . 'js/dist/bundle.js' );
+		wp_enqueue_script( 'react', get_stylesheet_directory_uri() . '/js/dist/bundle.js', [], mt_rand( 1, 1000 ), true );
 	}
 }
 
